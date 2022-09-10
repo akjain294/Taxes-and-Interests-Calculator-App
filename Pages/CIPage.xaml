@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Pages.CIPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="COMPOUND INTEREST CALCULATOR"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Grid Margin="30,30,30,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+                    <ColumnDefinition Width=".5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label  VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Medium" Text="Enter Principal"></Label>
+                <Entry x:Name="principal" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End"></Entry>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Medium" Grid.Row="1" Grid.Column="0" Text="Enter Rate"></Label>
+                <Entry x:Name="Rate" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End"></Entry>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Medium" Grid.Row="2" Grid.Column="0" Text="Enter Time"></Label>
+                <Entry x:Name="Time" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="End"></Entry>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="Medium" Grid.Row="3" Grid.Column="0" Text="Compound Type"></Label>
+                <Picker x:Name="picker" Grid.Row="3" Grid.Column="1"
+        Title="Select Type"
+        TitleColor="Red">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>yearly</x:String>
+                            <x:String>Half yearly</x:String>
+                            <x:String>Quaterly</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button HorizontalOptions="Center" Grid.Row="4" Grid.Column="0" BackgroundColor="CadetBlue" Margin="0,20,20,0" TextColor="yellow" Text="Compound.Interest" Clicked="Button_Clicked" Grid.ColumnSpan="2"></Button>
+
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="5" Grid.Column="0" Text="Amount" Padding="20,10,20,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="5" Grid.Column="1" Text="0" x:Name="result" Padding="20,20,20,20"></Label>
+
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="6" Grid.Column="0" Text="Compound Interest" Padding="20,10,20,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="6" Grid.Column="1" Text="0" x:Name="result1" Padding="20,20,20,20"></Label>
+
+                <Button x:Name="BtnClr" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="CadetBlue" TextColor="Yellow" Text="Clear" Margin="0,20,20,0" Grid.Row="7" Grid.Column="0" Clicked="BtnClr_Clicked" Grid.ColumnSpan="2" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

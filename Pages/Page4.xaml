@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Pages._4">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="10,10,10,10">
+
+                <Label Text="About Compound Interest"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       FontSize="Title" TextType="Html" FontAttributes="Bold" BackgroundColor="white" TextColor="Black"/>
+
+            </Grid>
+
+            <Grid Margin="10,10,10,10">
+                <Label Text="Compound interest is the interest calculated on the principal and the interest accumulated over the previous period.
+                       It is different from simple interest, where interest is not added to the principal while calculating the interest during the next period. In Mathematics, compound interest is usually denoted by C.I." 
+                       TextColor="Black" TextType="Html" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White" FontSize="Body"/>
+
+            </Grid>
+            <Grid Margin="20,20,20,20">
+                <Image Source="CompoundInterestLogo.jpg" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
+            </Grid>
+            <Grid Margin="20,20,20,20">
+                <Button Text="Click To Proceed" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5"  Clicked="Button_Clicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

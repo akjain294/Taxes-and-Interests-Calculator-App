@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Pages.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Income Tax Calculater"
+               
+                HorizontalOptions="CenterAndExpand" FontSize="Medium" FontAttributes="Bold"/>
+            <Grid Margin="30,30,30,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                    <RowDefinition Height=".2*"></RowDefinition>
+                   
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".6*"></ColumnDefinition>
+                    <ColumnDefinition Width=".4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" Text="Assessment Year" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" FontSize="Medium" Text="2022-23"></Label>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="1" Grid.Column="0" Text="Tax Payer" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="1" Text="Individual" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="2" Grid.Column="0" Text="Tax Regime" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Picker x:Name="picker1" Grid.Row="2" Grid.Column="1"
+        Title="Select Tax Regime"
+        TitleColor="Red" SelectedIndexChanged="picker1_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Old Tax Regime</x:String>
+                            <x:String>New Tax Regime</x:String>
+                            
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="3" Grid.Column="0" Margin="0,10,10,0" Text="Gender" FontSize="Medium" FontAttributes="Bold"></Label>
+                
+                <Picker x:Name="picker" Grid.Row="3" Grid.Column="1"
+        Title="Select Gender"
+        TitleColor="Red">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                            <x:String>Other</x:String>
+                            
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="4" Grid.Column="0" Text="Residential Status" FontAttributes="Bold" FontSize="Medium"></Label>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="4" Grid.Column="1" Text="Resident" FontSize="Medium" FontAttributes="Bold"></Label>
+                
+
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="5" Grid.Column="0" Text="Total Income" FontSize="Medium" FontAttributes="Bold"></Label>
+
+                <Entry x:Name="Income" HorizontalTextAlignment="End" Grid.Row="5" Grid.Column="1"></Entry>
+                <Label  VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="6" Grid.Column="0" Text="Deductions" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Entry x:Name="Deduct" HorizontalTextAlignment="End"  Grid.Row="6" Grid.Column="1"></Entry>
+
+
+                <Button VerticalOptions="FillAndExpand" HorizontalOptions="Start" Grid.Row="7" Grid.Column="0" BackgroundColor="CadetBlue" TextColor="yellow" Text="Calculate" Clicked="Button_Clicked"></Button>
+                <Button VerticalOptions="FillAndExpand" HorizontalOptions="End" Grid.Row="7" Grid.Column="1" BackgroundColor="CadetBlue" TextColor="yellow" Text="Last Entries" Clicked="Button_Clicked1"></Button>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="8" Grid.Column="1"  Text="0" x:Name="result" Padding="10,10,10,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="8" Grid.Column="0" Text="Income Tax after Relief" Padding="10,10,10,0" Margin="10,10,10,10" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="10" Grid.Column="0" Text="Total Tax Liability" Padding="10,10,10,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="10" Grid.Column="1" Text="0" x:Name="ans" Padding="10,10,10,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" Grid.Row="9" Grid.Column="0" Text="E.Cess" Padding="20,10,20,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Grid.Row="9" Grid.Column="1"  Text="0" x:Name="ecess" Padding="10,10,10,0" FontSize="Medium" FontAttributes="Bold"></Label>
+                
+            </Grid>
+            
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

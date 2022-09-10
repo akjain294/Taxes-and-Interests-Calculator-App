@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Pages._1"
+             Title="Welcome to Income Tax Calculator"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20,20,20,20">
+                
+                <Label Text="About Income Tax"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       FontSize="Title" TextType="Html" FontAttributes="Bold" BackgroundColor="white" TextColor="Black"/>
+
+            </Grid>
+
+            <Grid Margin="20,20,20,20">
+                <Label Text="Income tax is a direct tax that a government levies on the income of its citizens. The Income Tax Act, 1961, mandates that the central government collect this tax.The government can change the income slabs and tax rates every year in its Union Budget. 
+                       Income does not only mean money earned in the form of salary." TextColor="Black" TextType="Html" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White" FontSize="Body"/>
+
+            </Grid>
+            <Grid Margin="10,10,10,10">
+                <Image Source="incometaxlogo.jpg" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
+            </Grid>
+            <Grid Margin="20,20,20,20">
+                <Button Text="Click To Proceed" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5"  Clicked="Button_Clicked"/>
+            </Grid>
+                
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

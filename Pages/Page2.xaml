@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Pages._2"
+             Title="Welcome to Simple Interest Calculator">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20,20,20,20">
+
+                <Label Text="About Simple Interest"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                       FontSize="Title" TextType="Html" FontAttributes="Bold" BackgroundColor="white" TextColor="Black"/>
+
+            </Grid>
+
+            <Grid Margin="20,20,20,20">
+                <Label Text="Simple interest is a quick and easy method of calculating the interest charge on a loan. Simple interest is determined by multiplying the daily interest rate by the principal by the number of days that elapse between payments.
+                       This type of interest usually applies to automobile loans or short-term loans, although some mortgages use this calculation method." TextColor="Black" TextType="Html" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White" FontSize="Body"/>
+
+            </Grid>
+            <Grid Margin="10,10,10,10">
+                <Image Source="SI.jpg" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
+            </Grid>
+            <Grid Margin="20,20,20,20">
+                <Button Text="Click To Proceed" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5"  Clicked="Button_Clicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

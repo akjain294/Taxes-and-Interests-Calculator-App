@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.Pages.FirstPage"
+             Title="Select the Category">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+               
+
+               <BoxView Grid.Row="1" Grid.Column="0" Color="white"/>
+                <Image Source="assured_income.png"  
+                   Grid.Row="1"  
+                   Grid.Column="0"  
+                   BackgroundColor="White"  
+                   HorizontalOptions="FillAndExpand"  
+                   VerticalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Income Tax Calculator" FontSize="Caption" FontAttributes="Bold" TextColor="Black" Padding="20" VerticalOptions="End" Grid.Row="1" Grid.Column="0"></Label>
+                
+
+                <BoxView Grid.Column="1" Grid.Row="1" Color="white"/>
+                <Image Source="simple_interest.jpg"  
+                   Grid.Row="1"  
+                   Grid.Column="1"  
+                   BackgroundColor="White"  
+                   HorizontalOptions="FillAndExpand"  
+                   VerticalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Simple Interest Calculator" FontSize="Caption" FontAttributes="Bold" TextColor="Black" Padding="20" VerticalOptions="End" Grid.Row="1" Grid.Column="1"></Label>
+                
+
+                <BoxView Grid.Row="2" Grid.Column="0" Color="white"/>
+                <Image Source="basic_calculator.jpg"  
+                   Grid.Row="2"  
+                   Grid.Column="0"  
+                   BackgroundColor="White"  
+                   HorizontalOptions="FillAndExpand"  
+                   VerticalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Basic Calculator" FontSize="Caption" FontAttributes="Bold" TextColor="Black" VerticalOptions="End" Padding="20" Grid.Row="2" Grid.Column="0"></Label>
+               
+
+                <BoxView Grid.Row="2" Grid.Column="1" Color="white"/>
+                <Image Source="compound_interest_calculators.jpg"  
+                   Grid.Row="2"  
+                   Grid.Column="1"  
+                   BackgroundColor="White"  
+                   HorizontalOptions="FillAndExpand"  
+                   VerticalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Compound Interest Calculator" FontSize="Caption" FontAttributes="Bold" TextColor="Black" VerticalOptions="End" Padding="20" Grid.Row="2" Grid.Column="1"></Label>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
